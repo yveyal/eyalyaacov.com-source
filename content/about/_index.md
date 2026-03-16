@@ -14,72 +14,52 @@ show_series_index: false
 show_tags_index: false
 ---
 
-I’m Eyal. I have more than 15 years of experience in the field, starting in IT and DevOps, and spending the last 7 years deep in big data and databases.
+# I'm Eyal - hi 
+More than 15 years in the field — starting in IT and DevOps, spending 
+the last 7 years deep in big data and databases, and today tech leading a team that owns our 
+company's database layer end-to-end.
 
-Today I’m a tech lead on a team that owns the company’s database layer end-to-end. That means I spend a lot of time on the unglamorous details: data shape, access patterns, and what happens when the happy path breaks.
+This site is about one thing: **understanding how things actually work** — not at 
+the API surface, but underneath it. What does the storage engine actually do when 
+you run that query? Where does the latency come from? What breaks first, and why?
 
-My default bias is “use the best tool for the job”. In practice that means I love learning, because the best tool changes with context, constraints, and the tradeoffs you’re willing to pay.
+The way I learn is by cutting things open. That means forming a hypothesis, 
+designing a small experiment, and sitting with the results — even when they 
+contradict the docs or my intuition. Especially then.
 
-## What I’m doing here
+## AI is part of this journey
 
-I’m using this site to share and explore experiments, knowledge, and experience around databases and distributed systems. Sometimes that means distributed databases and replication. Sometimes it’s a boring single-node database and a performance problem that still matters.
+I use LLMs as an active thinking partner throughout this process — not to generate 
+answers, but to sharpen questions, stress-test reasoning, and explore angles I 
+might have missed.
 
-Think of this as a writing lab. It’s “learning in public”, but with enough detail that I (or you) can rerun an experiment later.
+That's genuinely interesting to me: where does an LLM's intuition about a system 
+match reality? Where does it confidently mislead? Using AI well in technical 
+exploration is itself a skill worth developing openly, so I'll be transparent about 
+where and how it shows up in my work.
 
-This is written for engineers who already build and operate systems and want practical notes, and for future-me: a searchable memory with enough context to reproduce conclusions.
+The source of truth is always the primary docs, the source code, and the 
+measurement. AI is the thought partner along the way.
 
-## What I’ll write about
+## What I write about
 
-I’m interested in the messy space between theory and production:
+Topics where the internals are non-obvious and the gap between "it works" and 
+"I understand why" is large:
 
-- Databases: relational and non-relational, storage engines, indexing, query planning.
-- Distributed systems: replication, consistency, failure modes, backpressure, queues/streams.
-- Performance engineering: benchmarking, profiling, capacity planning, latency vs throughput.
-- Operations: observability, incident patterns, rollout strategies, “why did this melt?”
+- **Databases:** Storage engines, indexing, query planning, relational and 
+  non-relational internals.
+- **Distributed Systems:** Replication, consistency models, failure modes, 
+  and backpressure.
+- **Performance Engineering:** Benchmarking, profiling, latency analysis, 
+  capacity planning.
+- **Operations:** Observability patterns, post-mortems, and rollout strategies.
 
-## What “experiments” means here
+## What's coming next
 
-When I say “experiments”, I mean scoped exercises with a clear question:
+- Deep dives into Elasticsearch inverted index internals.
+- Analyzing how MySQL decides to use temporary tables.
+- Exploring when "distributed" is a tax — and choosing single-node databases 
+  on purpose.
 
-- Small benchmarks with clear hypotheses (and the exact commands/config).
-- Failure injection and “what breaks first” exercises.
-- Tradeoff writeups after shipping: what we chose, what we regret, what we’d do next time.
-
-The scope can range from quick notes to full repos:
-
-- A small hypothesis in a post: a claim + quick test + result (even if the result is “inconclusive”).
-- A repeatable lab: scripts/configs, pinned versions, and enough detail to rerun later.
-- A full companion repo: code and/or infrastructure (Docker, Compose, Terraform, k8s manifests) to make the setup reproducible and shareable.
-
-## Conventions I’ll try to keep
-
-- Prefer minimal setups and publish artifacts (configs, scripts, datasets) when possible.
-- Separate measurements from interpretation.
-- Call out unknowns and follow-ups explicitly.
-
-## Reproducibility (when it’s a benchmark)
-
-- State the question and hypothesis up front.
-- Pin versions and capture the full config.
-- Record the exact commands used to run the test.
-- Report workload shape and variance across runs.
-
-## How I’ll write (and where AI fits)
-
-Expect a mix of formats: a series when a topic needs multiple steps, a single long post when it’s best read end-to-end, and short notes when the value is a concrete observation.
-
-I’ll also use AI (LLMs) in the process, mainly as a drafting and research assistant: sharpening an outline, generating alternative explanations, and stress-testing clarity. I won’t treat LLM output as a source of truth. When facts matter, I’ll prefer primary docs, code, and measurements, and I’ll call out when something is a hypothesis versus a result.
-
-## What this is not
-
-This is not a definitive guide, and it’s not vendor-neutral by default. I’ll be explicit about assumptions, environment, and what I didn’t test.
-
-If you’re reading along and see a mistake or a better approach, I’d like to hear it. The best outcome is that a post gets sharper over time.
-
-## What’s coming
-
-Some concrete threads I plan to write up:
-
-- Elasticsearch inverted index internals.
-- MySQL: the server’s decision to use temp tables.
-- When “distributed” is a tax: choosing a single-node database on purpose.
+If you spot a mistake or a sharper approach, I want to hear it. The goal is for 
+these posts to get closer to the truth over time.
